@@ -1,0 +1,100 @@
+<div class="img-block cyan darken-2"></div>
+<div class="container white z-depth-1 mt-20 new-notice" >
+	<form name="createNotice" novalidate ng-submit="submitForm()">
+		<div class="row">
+			<div class="input-field col s9 offset-s1">
+				<input id="adress" type="text" name="adress" class="validate" ng-model="notice.adress" required>
+				<label for="adress">Введите адресс</label>
+				<span ng-show="(createNotice.adress.$touched || submitted) && createNotice.adress.$error.required" class="invalid-message noticon">Обязательное поле</span>
+			</div>
+		</div>
+		<div class="row" >
+			<div class="input-field col s6 m7 offset-s1 offset-m1">
+				<input id="cost" type="text" name="cost" class="validate" ng-model="notice.cost" numbers-only required>
+				<label for="cost">Введите стоимость</label>
+				<span ng-show="(createNotice.cost.$touched || submitted) && createNotice.cost.$error.required" class="invalid-message noticon">Обязательное поле</span>
+			</div>
+			<div class="input-field col s3 m2" >
+			    <select ng-model="notice.currency" ng-init="notice.currency = ''" material-select>
+			      <option value="">бел. руб.</option>
+			      <option value="$">$</option>
+			      <option value="€">€</option>
+			    </select>
+			    <label>Валюта</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s9 offset-s1" phone-mask>
+				<input id="phone" type="text" name="phone" class="validate" ng-model="notice.phone"  required>
+				<label for="phone">Введите номер телефона</label>
+				<span ng-show="(createNotice.phone.$touched || submitted) && createNotice.phone.$error.required" class="invalid-message noticon">Обязательное поле</span>
+			</div>
+		</div>
+		<div class="row mb-10" ng-init="notice.roomCount=1">
+			<div class="grey-text col s3 offset-s1 m2 offset-m1">
+				Количество комнат:
+			</div>
+			<div class="col s2 m1">
+				<input type="radio" id="room1" value="1" ng-model="notice.roomCount" />
+      			<label for="room1">1</label>
+			</div>
+			<div class="col s5 m1">
+				<input type="radio" id="room2" value="2" ng-model="notice.roomCount" />
+      			<label for="room2">2</label>
+			</div>
+			<div class="col s2 m1">
+				<input type="radio" id="room3" value="3" ng-model="notice.roomCount" />
+      			<label for="room3">3</label>
+			</div>
+			<div class="col s5 m1">
+				<input type="radio" id="room4" value="4" ng-model="notice.roomCount"/>
+      			<label for="room4">4</label>
+			</div>
+			<div class="col s2 offset-s4 m1">
+				<input type="radio" id="room5" value="5" ng-model="notice.roomCount" />
+      			<label for="room5">5</label>
+			</div>
+			<div class="col s5 m2">
+				<input type="radio" id="roomMore" value="6" ng-model="notice.roomCount"/>
+      			<label for="roomMore">более 5</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s9 offset-s1">
+				<textarea id="description" name="description" class="materialize-textarea" ng-model="notice.description" required></textarea>
+				<label for="description">Описание</label>
+				<span ng-show="(createNotice.description.$touched || submitted) && createNotice.description.$error.required" class="invalid-message noticon textarea">Обязательное поле</span>
+			</div>
+		</div>
+		<div class="file-field input-field row">
+      		<div class="btn col s2 offset-s1">
+        		<span>Файл</span>
+        		<input type="file" ngf-select ngf-multiple="true" ng-model="files"/>
+      		</div>
+      		<div class="col s7">
+      			<input class="file-path validate" type="text"/>
+      		</div>
+      		
+    	</div>
+    	<div class="row ">
+    		<div class="col s9 offset-s1 valign-wrapper drag-box" ngf-drop ngf-multiple="true" ng-model="files" ngf-accept="'image/*'" ngf-drag-over-class="dragover">
+    			<span class="block-center">Вставьте сюда картинку или нажмите на кнопку "файл" (размер до 2 мб). </span>
+    			<div class="thumb-loader" ng-repeat="loadFile in loadFiles" ng-style="{'left': $index * 20 + '%'}">
+    				<div class="img"><img ngf-src="loadFile"></div>
+    				<div class="progress"><div class="determinate" style="width: {{loadFile.progress}}%"></div></div>
+    				<p class="percent-load" ng-bind="loadFile.progress + '%'"></p>
+    				<a href ng-click="removeFile(loadFile)" class="remove-block valign-wrapper"><i class="material-icons white-text center-block">close</i></a>
+    			</div>
+    			
+    		</div>
+    	</div>
+		<div class="row">
+			<div class="col s10">
+				<button class="waves-effect waves-light btn-large right" type="submit" >Добавить</button>
+			</div>
+		</div>
+		
+	</form>
+</div>
+
+<div class="document-drop-box"></div>

@@ -1,0 +1,80 @@
+
+<div class="container white z-depth-1 head">
+	<div class="row">
+		<div class="col s12">
+			<h5 class="heading">Спасибо за использование нашего сервиса! Вы можете помочь сделать его лучше.</h5>
+		</div>
+		<div class="col s12">
+			<blockquote class="grey-text">
+				В этом разделе любой пользователь может оставить заметку, на тему желаемого функционала. 
+				Также здесь вы можете отметить что вам понравилось или не понравилось в нашем сервисе.
+				Каждую заметку можно отметить как понравившуюся или наоборот. Нам важно мнение каждого пользователя!
+			</blockquote>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<p class="wall-text">Оставьте комментарий</p>
+</div>
+
+<div class="container white z-depth-1 message">
+	<div class="row">
+	    <form name="messageForm" novalidate ng-submit="addWish()" class="col s12" >
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <textarea id="mes" name="mes" class="materialize-textarea validate" ng-model="message" required></textarea>
+	          <label for="mes">Сообщение</label>
+	          <span ng-show="(messageForm.mes.$touched || submitted) && messageForm.mes.$error.required" class="invalid-message noticon textarea">Обязательное поле</span>
+	        </div>
+	      </div>
+	      <button class="btn waves-effect waves-light" type="submit">Отправить</button>
+	    </form>
+	</div>
+</div>
+
+<div class="container">
+	<p class="wall-text">0 комментариев</p>
+</div>
+
+<div class="message-block">
+	<div class="container white z-depth-1" ng-repeat="wish in wishes">
+		<div class="row">
+			<div class="icon-section col s4 m2">
+				<i class="medium material-icons light-green">perm_identity</i>
+			</div>
+			<div class="text-section col s8 m10">
+				<div class="row">
+					<div class="col s12">
+						{{wish.text}}
+					</div>
+				</div>
+				<div class="row txt-footer" tooltipped>
+					<div class="col s6">
+						<span class="date grey-text">{{wish.date | date:'dd.MM.yyyy HH:mm:ss'}}</span>
+					</div>
+					<div class="col s6" >
+						<a href class="like tooltipped" ng-click="addDislike(wish)" data-position="bottom" data-delay="50" data-tooltip="Не нравится" >
+							{{wish.dislikes}} 
+	      					<i class="material-icons">{{wish.disliked_icon}}</i>
+						</a>
+						<a href class="like tooltipped" ng-click="addLike(wish)" data-position="bottom" data-delay="50" data-tooltip="Нравится" >
+							{{wish.likes}} 
+	      					<i class="material-icons">{{wish.liked_icon}}</i>
+						</a>
+					</div>
+				</div>
+				<!-- <p class="">{{wish.text}}</p> -->
+				
+				<!-- <div class="down-panel-mes" tooltipped>
+					
+					
+					
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div id="scripts"></div>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="rentHouseApp">
+<head>
+ <base href="/index.html">
+  <meta charset="utf-8">
+  <title>Сервис по сбору обьявлений аренды жилья в Гомеле и Гомельской области</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/icon.png">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/resize.css">
+
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TWTCLT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TWTCLT');</script>
+<!-- End Google Tag Manager -->
+
+  <a href="#/offers"><img style="position: absolute; top: 0; right: 0; border: 0;z-index:5;" src="images/bn.png" alt="Сообщите об ошибке" data-canonical-src="images/bn.png"></a>
+  <!-- <div class="navbar-fixed"> -->
+    <nav class="cyan">
+      <div class="container">
+        <div class="nav-wrapper" navmenu-init>
+          <a href="#!" class="brand-logo"><img src="images/logo.png"></a>
+          <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+          	<li><a href="main">Главная</a></li>
+          	<li><a href="rent/1">Просмотр объявлений</a></li>
+            <li><a href="contact">Связаться</a></li>
+            <li><a href="offers">Отзывы и предложения</a></li>
+            <!-- <li><a href="#">Вход</a></li> -->
+          </ul>
+          <ul class="side-nav" id="mobile-nav">
+            <li><a href="main">Главная</a></li>
+            <li><a href="rent/1">Просмотр объявлений</a></li>
+            <li><a href="contact">Связаться</a></li>
+            <li><a href="offers">Отзывы и предложения</a></li>
+            <!-- <li><a href="#">Вход</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- </div> -->
+
+  <div ng-view class="partial-container"></div>
+
+  <footer class="page-footer cyan">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Заходите к нам еще.</h5>
+          <p class="grey-text text-lighten-4">Будем рады каждому отзыву о нашем сервисе. Его вы можете оставить в разделе отзывы и предложения.</p>
+          <p class="grey-text text-lighten-4">Версия: 1.0</p>
+          <p class="grey-text text-lighten-4">Дата обновления: 11.08.2015</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Ссылки</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#/main">Главная</a></li>
+            <li><a class="grey-text text-lighten-3" href="#/offers">Отзывы и предложения</a></li>
+            <li><a class="grey-text text-lighten-3" href="#/contact">Связаться</a></li>
+            
+            <li><a class="grey-text text-lighten-3" href="#/new-notice">Оставить объявление</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container" scroll-top-btn-init>
+      © 2015 
+      <a class="grey-text text-lighten-4 right" href="#" id="scroll-top">
+        <img class="arrow" src="images/ic_keyboard_arrow_up_white_24dp.png">В начало</a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- Set jquery instead JLite -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+  <script src="bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script>
+  <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+  <script src="bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js"></script>
+  <!-- // <script src="bower_components/angular-sanitize/angular-sanitize.js"></script> -->
+  <!-- // <script src="bower_components/angular-materialize/src/angular-materialize.js"></script> -->
+  <script src="js/app.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/newNoticeController.js"></script>
+  <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+
+  
+</body>
+</html>

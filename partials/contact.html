@@ -1,0 +1,37 @@
+<div class="img-block cyan darken-2"></div>
+
+<div class="container white z-depth-2 contact-block">
+	<div class="letter teal accent-4 ">
+		<i class="material-icons prefix">email</i>
+	</div>
+    <form name="contactForm" novalidate ng-submit="submitForm()">
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" name="name" class="validate" ng-model="contact.name">
+          <label for="icon_prefix">Имя</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">link</i>
+          <input id="icon_email" type="email" name="myemail" class="validate" ng-model="contact.email" required>
+          <label for="icon_email">Email (Обязательно)</label>
+          <span ng-show="contactForm.myemail.$error.email" class="invalid-message">Неверно введен email</span>
+          <span ng-show="(contactForm.myemail.$touched || submitted) && contactForm.myemail.$error.required" class="invalid-message">Обязательное поле</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">mode_edit</i>
+          <textarea id="icon_prefix2" name="message" class="materialize-textarea validate" ng-model="contact.message" required></textarea>
+          <label for="icon_prefix2">Сообщение (обязательно)</label>
+          <span ng-show="(contactForm.message.$touched || submitted) && contactForm.message.$error.required" class="invalid-message textarea">Обязательное поле</span>
+        </div>
+      </div>
+      <button type="submit" class="btn waves-effect waves-light right" >Отправить</button>
+      <!-- ng-disabled="contactForm.$invalid" -->
+    </form>
+
+	      
+
+
+</div>

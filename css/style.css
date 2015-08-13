@@ -1,0 +1,524 @@
+body {
+	background: #F5F5F5 ;
+}
+
+.partial-container {
+	min-height: 250px;
+}
+
+.img-block {
+	padding-top: 20px;
+	height: 250px;
+	width: 100%;
+}
+
+.main-section {
+	margin-top: -150px;
+	
+	padding: 20px;
+	padding-bottom: 0;
+}
+
+footer.page-footer {
+	margin-top: 60px;
+}
+
+.arrow {
+	width: 30px;
+}
+
+.adress {
+	font-size: 15px;
+}
+
+.smaller {
+	font-size: 14px;
+
+}
+
+.card-image { /* correct then*/
+	height: 150px;
+	overflow: hidden;
+}
+
+.card .card-action {
+	padding-top: 0;
+	border-top: none;
+	overflow: hidden;
+}
+
+.card .card-action a {
+	margin-right: 0;
+}
+
+.card-action i.left {
+	margin-right: 5px;
+	font-size: 22px;
+}
+
+.card-action .views span {
+	line-height: 24px;
+	font-size: 14px;
+}
+
+.card .adress {
+	height: 44px;
+	overflow: hidden;
+}
+
+.light-green-icon {
+	color: #9e9e9e;
+}
+
+.card-arrow {
+	margin-top: -3px;
+}
+
+.pagination {
+	float: right;
+}
+
+.pagination li.active {
+	background: #8BC34A ;
+}
+
+.pagination li {
+	padding: 0;
+	/*line-height: */
+}
+
+.pagination li a{
+	padding: 4px 10px;
+	/*line-height: 16px;*/
+}
+
+.option-block {
+	padding: 10px 20px;
+}
+
+.option-block .row {
+	margin-bottom: 0;
+}
+
+.count-rent {
+	padding-right: 5px;
+}
+
+/*---------------------offers page-----------------------*/
+.container.head {
+	margin-top: 20px;
+	padding: 20px 40px;
+}
+
+.heading {
+	font-weight: 300;
+}
+
+blockquote {
+	margin: 0 20px;
+	border-color: #8BC34A;
+}
+
+.wall-text {
+	text-transform: uppercase;
+}
+
+.container.message {
+	padding: 20px 40px;
+}
+
+.message-block .container {
+	padding: 20px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.icon-section {
+	text-align: center;
+}
+.icon-section i {
+	color: white;
+	margin-top: 10px;
+	padding: 5%;
+	border-radius: 50%;
+}
+
+.message-block .date {
+	font-size: 0.875em; /*14px;*/
+}
+
+.message-block .like {
+	float: right;
+	color: #9e9e9e;
+	font-size: 0.875em; /*14px;*/
+}
+
+.message-block .like:first-of-type {
+	margin-left: 5%;
+}
+
+.message-block .like i {
+	position: relative;
+	top: 6px;
+	color: #8BC34A;
+	font-size: 1.375em; /*22px*/
+}
+
+.txt-footer {
+	margin-bottom: 0;
+}
+
+/*---------------notice-detail page----------------------*/
+.notice-detail {
+	padding-top: 20px;
+}
+
+.notice-detail .photo-content img {
+	width: 100%;
+}
+
+.notice-detail .photo-content .vertical {
+	width: auto;
+	height: 400px;
+	display: block;
+	margin: 0 auto;
+}
+
+.notice-detail .col.photo-content  {
+	padding: 0px;
+}
+
+
+.thumbnails {
+	overflow: hidden;
+	padding: 20px 0;
+}
+
+.thumbnails div {
+	width: 25%;
+	height: auto;
+	max-height: 90px;
+	overflow: hidden;
+	float: left;
+	margin: 0 4%;
+
+}
+
+.thumbnails div {
+	cursor: pointer;
+}
+
+.thumbnails div img {
+	width: 100%;
+}
+
+.pr-5 {
+	padding-right: 5px;
+}
+
+.t-align-just {
+	text-align: justify;
+}
+
+.animation-toggle {
+	opacity: 0;
+}
+
+.animate-show {
+	transition: opacity linear 0.4s;
+}
+/*---------------contact page-----------------------*/
+.contact-block {
+	padding: 20px;
+	padding-top: 40px;
+	position: relative;
+	top: -150px;
+	/*overflow: hidden;*/
+}
+
+.contact-block form {
+	overflow: hidden;
+}
+
+.letter {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: red;
+	position: absolute;
+	left: 45%;
+	top: -14%;
+	text-align: center;
+}
+
+.letter .material-icons {
+	font-size: 42px;
+	line-height: 76px;
+	color: white;
+}
+
+.ng-scope .contact + .page-footer {
+	display: none;
+}
+
+.invalid-message {
+	position: absolute;
+	top: 50px;
+	color: #F44336;
+	font-size: 12px;
+	left: 4rem;
+	/*display: none;*/
+	transition: display linear 1s;
+}
+.invalid-message.noticon {
+	left: inherit;
+}
+.invalid-message.textarea {
+	top: 85px;
+}
+
+.invalid-message.textarea.noticon {
+	top: 95px;
+}
+
+/*input.ng-invalid-required {
+	border-bottom: 1px solid #F44336;
+	box-shadow: 0 1px 0 0 #F44336;
+}*/
+
+.brand-logo {
+	/*background: red;*/
+	width: 132px;
+	overflow: hidden;
+}
+
+.brand-logo img {
+	width: 100%;
+}
+
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+/*
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}*/
+
+/*p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}*/
+
+.parallax-container {
+  min-height: 560px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+/*@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}*/
+
+.icon-block {
+  padding: 0 15px;
+  text-align: justify;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+/*footer.page-footer {
+  margin: 0;
+}*/
+
+.circle-box {
+	width: 45%;
+	border-radius: 50%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.circle-box:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+.circle-box .content{
+	position: absolute;
+	top: 30%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	color: black;
+}
+
+.header {
+	/*padding-top: 60px;*/
+	font-weight: 300;
+}
+
+.header.with-bg {
+	font-weight: 400;
+	line-height: 40px;
+	font-size: 2.44rem;
+	/*background: rgba(255, 255, 255, 0.6);*/
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+/*-------------------new notice page--------------------------*/
+.new-notice {
+	padding: 20px 0;
+	position: relative;
+	margin-top: -150px;
+}
+
+.new-notice .row {
+	margin-bottom: 0;
+}
+
+.row.mb-10 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.drag-box {
+	height: 120px;
+	border-radius: 5px;
+	border: 2px dashed #9e9e9e;
+	margin-bottom: 20px;
+	background: white;
+	transition: all linear 1s;
+	position: relative;
+	z-index: 5;
+	overflow: hidden;
+}
+
+.drag-box.dragover {
+	border: 2px solid #9e9e9e;
+	background: #e0e0e0 ;
+	/*opacity: 0.6;*/
+}
+
+.drag-box span {
+	color: #9e9e9e;
+}
+
+.drag-box .drag-white {
+	color: white;
+}
+
+.drag-box.dragover span {
+	color: #616161 ;
+}
+
+.drag-box.dragover .thumb-loader {
+	opacity: 0;
+}
+
+.block-center {
+	margin: 0 auto;
+}
+
+.document-drop-box {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(34, 34, 34, 0.65);
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+.thumb-loader {
+	position: absolute;
+	/*left: 0;*/
+	float: left;
+	width: 18%;
+	padding: 1%;
+}
+
+.thumb-loader .img {
+	width: 100%;
+	background: #000;
+	height: 65px;
+	overflow: hidden;
+}
+
+.thumb-loader .img img {
+	width: 100%;
+}
+
+.thumb-loader .progress {
+	margin-bottom: 0;
+}
+
+.thumb-loader .percent-load {
+	margin-top: 0;
+	text-align: center;
+}
+
+.thumb-loader .remove-block {
+	width: 90%;
+	height: 85%;
+	background: rgba(34, 34, 34, 0.65);
+	position: absolute;
+	top: 5%;
+	visibility: hidden;
+}
+.thumb-loader .remove-block i {
+	font-size: 32px;
+}
+
+.thumb-loader:hover .remove-block {
+	visibility: visible;
+
+}
+nav .nav-wrapper i {
+	display: inline-block;
+}
+
+nav .brand-logo.back-btn {
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+}
+
+nav .brand-logo.back-btn span {
+	font-size: 16px;
+	top: -10px;
+	position: relative;
+}
+
+nav .brand-logo.back-btn:hover, nav .brand-logo.active {
+    background-color: rgba(0, 0, 0, 0.1); 
+}

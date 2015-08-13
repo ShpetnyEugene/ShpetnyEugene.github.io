@@ -1,0 +1,26 @@
+<div class="advert-detail">
+	
+	<div class="container">
+		<div class="row">
+			<div class="col s7 white z-depth-1 photo-content" boxed-init>
+				<img ng-src="{{mainImageUrl}}" class="materialboxed animate-show" fade-in width="650" >
+				<div class="thumbnails" >
+					<div ng-repeat="img in advert.images" class="hoverable">
+						<img ng-src="{{img}}" ng-click="setImage(img)">
+					</div>
+				</div>
+			</div>
+			<div class="col s5 white z-depth-1">
+				<p><span class="grey-text pr-5">Адресс:</span> {{advert.address}}</p>
+				<p><span class="grey-text pr-5">Стоимость:</span>{{advert.cost}}</p>
+				<p><span class="grey-text pr-5">Количество комнат:</span>{{advert.roomCount}}</p>
+				<p><span class="grey-text pr-5">Контакты:</span>{{advert.contacts}}</p>
+				<p class="t-align-just"><span class="grey-text pr-5">Описание:</span>{{advert.description}}</p>
+				<p><span class="grey-text pr-5">Количество просмотров:</span>{{advert.views}}</p>
+				<p><span class="grey-text pr-5">Дата подачи объявления:</span>{{advert.date | date:'dd.MM.yyyy'}}</p>
+				<p><span class="grey-text pr-5">Источник:</span><a href="{{advert.source}}" target="_blank">{{advert.source}}</a> </p>
+			</div>
+		</div>
+	</div>
+
+</div>

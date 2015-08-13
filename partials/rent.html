@@ -1,0 +1,68 @@
+<div class="img-block cyan darken-2">
+    
+  <div class="container option-block white z-depth-2" id="page-adverts">
+    <div class="row">
+      <div class="col s12" dropdown-init>
+        <span class="count-rent hide-on-small-only">Количество обьявлений на странице:</span>
+        <span class="count-rent hide-on-med-and-up">На странице:</span>
+        <a class="btn dropdown-button" href data-activates="dropdown-count-rent">
+            {{countRentOnPage}}<i class="mdi-navigation-arrow-drop-down right"></i>
+        </a>
+        <ul id="dropdown-count-rent" class="dropdown-content">
+          <li><a href ng-click="changeRentOnPage(5)">5</a></li>
+          <li><a href ng-click="changeRentOnPage(10)">10</a></li>
+          <li><a href ng-click="changeRentOnPage(15)">15</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container main-section white z-depth-2">
+  <div class="row" >
+    
+    <div class="col s12 m6 l4" ng-repeat="advert in adverts">
+      <div class="card">
+        <a href="#/apartment/{{advert.id}}">
+          <div class="card-image">
+            <img ng-src="{{advert.images[0]}}" >
+          </div>
+        </a>
+        <div class="card-content">
+          <p class="grey-text smaller">{{advert.roomCount}} - комнатная</p>
+          <p class="adress valign-wrapper">{{advert.address}}</p>
+          <p class="smaller">Стоимость: {{advert.cost}}</p>
+          <p class="smaller grey-text">{{advert.date | date:'dd.MM.yyyy'}}</p>
+        </div>
+        <div class="card-action">
+          <div class="views left">
+            <i class="material-icons light-green-icon left">visibility</i><span class="grey-text left">{{advert.views}}</span>
+          </div>
+          <a href="#/apartment/{{advert.id}}" class="light-green-text right">Подробнее <img class="card-arrow" src="images/ic_keyboard_arrow_right_white_24px.svg"></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+
+      <ul class="pagination" id="pagination">
+        <li class="disabled"><a href=""><i class="material-icons">chevron_left</i></a></li>
+        <li class="waves-effect" ng-repeat="number in pagination.numbers" ng-class="{active : isSelected(number)}">
+          <a href="#rent/{{number}}" ng-if="number != '...'">{{number}}</a>
+          <a href ng-if="number == '...'">{{number}}</a>
+        </li>
+        <li class="waves-effect"><a href=""><i class="material-icons">chevron_right</i></a></li>
+        
+      </ul>
+
+  </div>
+</div>
+
+<div class="fixed-action-btn" load-script watch-offset-source>
+  <a href="#/new-notice" class="btn-floating btn-large waves-effect waves-light light-green"><i class="material-icons">add</i></a>     
+</div>
+
+
+
